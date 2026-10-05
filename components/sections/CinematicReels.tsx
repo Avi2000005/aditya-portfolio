@@ -32,6 +32,7 @@ export function CinematicReels() {
       : undefined,
     title: v.title,
     caption: v.client,
+    aspectClass: "aspect-9/16",
   }));
 
   const openLightbox = useCallback((idx: number) => setLightboxIndex(idx), []);

@@ -27,6 +27,7 @@ export interface LightboxItem {
   poster?: string;
   title?: string;
   caption?: string;
+  aspectClass?: string;
 }
 
 interface LightboxProps {
@@ -148,8 +149,15 @@ export function Lightbox({
       />
 
       {/* Video container */}
-      <div className="relative z-10 w-full max-w-4xl mx-4 flex flex-col gap-3">
-        <div className="relative aspect-video rounded-xl overflow-hidden bg-black shadow-2xl">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 flex flex-col items-center gap-3">
+        <div
+          className={cn(
+            "relative rounded-xl overflow-hidden bg-black shadow-2xl flex items-center justify-center",
+            current.aspectClass === "aspect-9/16"
+              ? "aspect-9/16 max-h-[75vh] w-auto max-w-xs sm:max-w-sm"
+              : "aspect-video w-full"
+          )}
+        >
           <video
             ref={videoRef}
             className="w-full h-full object-contain"
