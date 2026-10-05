@@ -42,7 +42,7 @@ You never need to touch any component files. Just edit `siteConfig.ts`:
 - **Stats**: update `stats` array values
 - **Add a marketing video**: add an object to `marketingVideos`
 - **Add a cinematic reel**: add an object to `cinematicVideos`
-- **Change accent color**: in `app/globals.css`, change `--color-accent: #C8A25D;` to your color
+- **Change accent color**: in `app/globals.css`, change `--color-accent: #2563EB;` to your color
 - **Testimonials**: replace placeholder quotes in `testimonials` array
 
 ### Adding a New Marketing Video
@@ -191,8 +191,8 @@ Then update `/app/api/contact/route.ts` with your mailer code (instructions are 
 Open `app/globals.css` and change one line:
 
 ```css
---color-accent: #C8A25D;  /* warm gold — change this */
---color-accent-light: #F0E3C8;  /* lighter tint — change this too */
+--color-accent: #2563EB;  /* modern blue */
+--color-accent-light: #EFF6FF;  /* soft sky blue tint */
 ```
 
 Options:
